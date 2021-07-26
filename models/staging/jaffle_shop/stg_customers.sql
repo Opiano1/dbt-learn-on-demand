@@ -6,7 +6,7 @@ with customers as (
         first_name,
         last_name
 
-    from `data-replication-317209.dbt_test.jaffle_shop_customers`
+    from {{source('dbt_test','jaffle_shop_customers')}}
 
 )
 

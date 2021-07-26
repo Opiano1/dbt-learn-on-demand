@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: dbt_test
+    description: A clone of a MySQL application database.
+    database: data-replication-317209
+    tables:
+      - name: jaffle_shop_customers
+        description: Raw customers data.
+        columns:
+          - name: id
+            description: Primary key for customers.
+            tests:
+              - unique
+              - not_null
+            
+      - name: jaffle_shop_orders
+        description: Raw orders data.
+        columns:
+          - name: id
+            description: Primary key for orders.
+            tests:
+              - unique
+              - not_null
